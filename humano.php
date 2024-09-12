@@ -19,4 +19,7 @@ class Humano{
         return "Nome: " . $this->nome . "\n" . "Idade: ". $this->idade . "\n" . "Endereco: ". $this->endereco . "\n" . "Contato: " . $this->contato . "\n";
     }
     
+    public function getNome(){
+        return $this->nome;
+    }
 }

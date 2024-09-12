@@ -20,46 +20,35 @@ class Animal{
         $this->dono = $dono;
     }
 
-    public function getNome(){
-        return $this->nome;
-    }
-    public function getRaca(){
-        return $this->raca;
-    }
-    public function getQuantidadePatas(){
-        return $this->quantidadePatas;
-    }
-    public function getCor(){
-        return $this->cor;
-    }
-    public function getPeso(){
-        return $this->peso;
-    }
-    public function getTamanho(){
-        return $this->tamanho;
-    }
-
+    
     public function falar(){
         echo "falar";
     }
+
+   public function __toString()
+   {
+    return "Nome: " . $this->nome . "\n" . "Raça: " . $this->raca . "\n" . "Quantidade de Patas: " . $this->quantidadePatas . "\n" . "Cor: " . $this->cor . "\n" . "Peso: " . $this->peso . "\n" . "Tamanho: " . $this->tamanho . "\n" . "Dono: " . $this->dono;
+   }
+  
+
 }
 
 class Cachorro extends Animal{
     public function falar(){
-        echo "Auau\n";
+        echo "Chachorro falou: AuAu\n";
     }
 }
 
 class Orangotango extends Animal{
     public function falar()
     {
-        echo "U-U-U-U-U-U-U-U-U-U\n";
+        echo "Orangotango falou: U-U-U-U-U-U-U-U-U-U\n";
     }
 }
 
 class Peixinho extends Animal{
     public function falar()
     {
-        echo "Glub-Glub\n";
+        echo "Peixinho falou: Glub-Glub\n";
     }
 }
