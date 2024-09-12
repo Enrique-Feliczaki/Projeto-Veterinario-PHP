@@ -1,30 +1,31 @@
 <?php
 require_once "humano.php";
 class Funcionario extends Humano{
-    private $cargos;
+
     private $funcionario;
 
     
-    public function __construct($cargos,Humano $funcionario)
+    public function __construct(Humano $funcionario)
     {
-        $this->cargos = $cargos;
         $this->funcionario = $funcionario;
     }
-    
     public function __toString()
     {
-        Parent::__toString();
-        return "Cargo: " . $this->cargos . "\n";
+        
     }
 }
 class Balconista extends Funcionario{
     public $salario;
     public $balconista;
 
-    public function __construct($salario,$balconista)
+    public function __construct($salario,Funcionario $balconista)
     {
         $this->salario = $salario;
         $this->balconista = $balconista;
+    }
+    public function __toString()
+    {
+        return "Cargo: " . $this->balconista . "\n" . "Salario: " . $this->salario . "\n";
     }
 }
 
@@ -37,4 +38,9 @@ class Veterinario extends Funcionario{
         $this->salario = $salario;
         $this->veterinario = $veterinario;
     }
+    public function __toString()
+    {
+        return "Cargo: " . $this->veterinario . "\n" . "Salario: " . $this->salario .  "\n";
+    }
+
 }

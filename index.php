@@ -16,9 +16,6 @@ $urubu->falar();
 $loboGuara = new Peixinho("Peixinho", "Nemo", 0, "Preto-Escuro-Darkness", 10, 1, $humano3);
 $loboGuara->falar();
 
-
-
-echo $bandido;
-
-$funcionario1 = new Funcionario("balconista", $bandido);
-echo $funcionario;
+$funcionari1 = new Funcionario($humano1);
+$balconista = new Balconista(1300,$funcionari1);
+echo $balconista;
